@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import DriverStandingsCard from "./_components/driver-card";
 
 // Define the props for each icon component
 interface IconProps {
   className?: string;
 }
 
-export default function Component() {
+export default function Page() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="bg-[#355E3B] text-white py-4 px-6 flex items-center justify-between">
@@ -71,66 +72,7 @@ export default function Component() {
         <main className="flex-1 p-6">
           <div className="grid gap-6">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Card>
-                <CardHeader className="flex items-center justify-between">
-                  <CardTitle>Driver Standings</CardTitle>
-                  <Link href="#" className="text-[#355E3B] dark:text-[#355E3B] hover:underline" prefetch={false}>
-                    View All
-                  </Link>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid gap-2">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <img
-                          src="/placeholder.svg"
-                          width="32"
-                          height="32"
-                          className="rounded-full"
-                          alt="Max Verstappen"
-                        />
-                        <div>
-                          <div className="font-medium">Max Verstappen</div>
-                          <div className="text-gray-500 dark:text-gray-400 text-sm">Red Bull</div>
-                        </div>
-                      </div>
-                      <div className="font-medium">234</div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <img
-                          src="/placeholder.svg"
-                          width="32"
-                          height="32"
-                          className="rounded-full"
-                          alt="Lewis Hamilton"
-                        />
-                        <div>
-                          <div className="font-medium">Lewis Hamilton</div>
-                          <div className="text-gray-500 dark:text-gray-400 text-sm">Mercedes</div>
-                        </div>
-                      </div>
-                      <div className="font-medium">189</div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <img
-                          src="/placeholder.svg"
-                          width="32"
-                          height="32"
-                          className="rounded-full"
-                          alt="Sergio Perez"
-                        />
-                        <div>
-                          <div className="font-medium">Sergio Perez</div>
-                          <div className="text-gray-500 dark:text-gray-400 text-sm">Red Bull</div>
-                        </div>
-                      </div>
-                      <div className="font-medium">171</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <DriverStandingsCard />
               <Card>
                 <CardHeader className="flex items-center justify-between">
                   <CardTitle>Constructor Standings</CardTitle>
